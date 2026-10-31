@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en-IE">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>O’Shea Heating and Plumbing | Plumber &amp; Heating Engineer</title>
+<meta name="description" content="O’Shea Heating and Plumbing: boiler installs and servicing, central heating, bathrooms and emergency plumbing. Call +353 85 235 4083.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pine:#0f2e2a; --pine-2:#16413b; --copper:#c8642b; --copper-d:#a64e1d;
+  --paper:#f4f6f3; --white:#fff; --ink:#15211f; --muted:#56655f; --line:#d9dfda;
+  --head:'Bricolage Grotesque','Segoe UI',Arial,sans-serif;
+  --body:'Instrument Sans','Segoe UI',Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:110px}
+body{font-family:var(--body);color:var(--ink);background:var(--paper);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--copper);outline-offset:3px;border-radius:4px}
+.wrap{width:min(1160px,92%);margin-inline:auto}
+h1,h2,h3{font-family:var(--head);line-height:1.08;letter-spacing:-.02em}
+
+/* top bar */
+.topbar{background:var(--copper);color:#fff}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 0;flex-wrap:wrap}
+.topbar strong{font-family:var(--head);font-size:1.15rem;font-weight:800;letter-spacing:-.01em}
+.topbar a{font-family:var(--head);font-weight:800;font-size:1.25rem;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+.topbar a:hover{text-decoration:underline}
+.topbar svg{width:20px;height:20px;fill:#fff}
+
+/* nav */
+header.nav{position:sticky;top:0;z-index:50;background:rgba(244,246,243,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{font-family:var(--head);font-weight:800;font-size:1.3rem;text-decoration:none;color:var(--pine);display:flex;align-items:center;gap:10px}
+.logo i{width:30px;height:30px;border-radius:8px;background:var(--pine);display:grid;place-items:center}
+.logo i svg{width:18px;height:18px;stroke:var(--copper);fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+nav ul{display:flex;gap:30px;list-style:none;align-items:center}
+nav a{text-decoration:none;font-weight:500;color:var(--ink)}
+nav a:hover{color:var(--copper-d)}
+.btn{display:inline-block;padding:14px 26px;border-radius:999px;font-weight:600;text-decoration:none;font-family:var(--body);border:2px solid transparent;cursor:pointer;font-size:1rem;transition:background .2s,color .2s,border-color .2s}
+.btn-copper{background:var(--copper);color:#fff}
+.btn-copper:hover{background:var(--copper-d)}
+.btn-line{border-color:rgba(255,255,255,.4);color:#fff}
+.btn-line:hover{background:#fff;color:var(--pine)}
+.btn-pine{background:var(--pine);color:#fff}
+.btn-pine:hover{background:var(--pine-2)}
+nav .btn{padding:10px 20px;color:#fff}
+nav .btn:hover{color:#fff}
+.menu-btn{display:none;background:none;border:2px solid var(--pine);border-radius:10px;padding:8px 12px;font:600 .95rem var(--body);color:var(--pine);cursor:pointer}
+
+/* hero */
+.hero{background:var(--pine);color:#fff;position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:56px;padding:92px 0 100px;align-items:center;position:relative;z-index:1}
+.hero h1{font-size:clamp(2.6rem,6vw,4.7rem);font-weight:800;max-width:13ch}
+.hero p.lead{margin:26px 0 34px;max-width:52ch;font-size:1.15rem;color:#c9d9d4}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap}
+.pipes{position:absolute;inset:0;width:100%;height:100%;z-index:0;opacity:.9}
+.pipes path{fill:none;stroke:var(--copper);stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1800;stroke-dashoffset:1800;animation:run 3.2s ease-out .2s forwards}
+.pipes path.b{stroke:#2b5a52;stroke-width:3;animation-delay:.6s}
+@keyframes run{to{stroke-dashoffset:0}}
+.callcard{background:var(--white);color:var(--ink);border-radius:22px;padding:30px;box-shadow:0 30px 60px -20px rgba(0,0,0,.5)}
+.callcard h2{font-size:1.5rem;color:var(--pine)}
+.callcard p{color:var(--muted);margin:8px 0 18px;font-size:.98rem}
+.callcard .num{display:block;font-family:var(--head);font-weight:800;font-size:1.7rem;color:var(--copper-d);text-decoration:none;margin-bottom:16px;letter-spacing:-.01em}
+.callcard ul{list-style:none;border-top:1px solid var(--line)}
+.callcard li{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--line);font-size:.96rem}
+.callcard li span:last-child{font-weight:600;color:var(--pine)}
+
+/* sections */
+section{padding:96px 0}
+.head{max-width:640px;margin-bottom:48px}
+.head h2{font-size:clamp(2rem,4vw,3rem);color:var(--pine)}
+.head p{margin-top:14px;color:var(--muted)}
+
+/* services: one feature + list */
+.services-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px}
+.svc{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:30px;transition:border-color .2s,transform .2s}
+.svc:hover{border-color:var(--copper);transform:translateY(-3px)}
+.svc svg{width:34px;height:34px;stroke:var(--copper);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;margin-bottom:18px}
+.svc h3{font-size:1.3rem;color:var(--pine);margin-bottom:8px}
+.svc p{color:var(--muted);font-size:.98rem}
+.svc.feature{grid-column:span 2;background:var(--pine);color:#fff;border-color:var(--pine);display:flex;flex-direction:column;justify-content:space-between}
+.svc.feature h3{color:#fff;font-size:1.9rem}
+.svc.feature p{color:#c9d9d4;max-width:48ch}
+.svc.feature a{margin-top:22px;align-self:flex-start}
+
+/* about */
+.about{background:var(--white);border-block:1px solid var(--line)}
+.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}
+.about h2{font-size:clamp(2rem,4vw,3rem);color:var(--pine)}
+.about p{color:var(--muted);margin-top:18px;max-width:58ch}
+.facts{display:grid;gap:0;border-top:2px solid var(--pine)}
+.facts div{padding:22px 0;border-bottom:1px solid var(--line)}
+.facts h3{font-size:1.15rem;color:var(--pine);margin-bottom:4px}
+.facts p{margin:0;font-size:.97rem}
+
+/* benefits */
+.benefits{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.ben{padding:6px 28px 6px 0;border-right:1px solid var(--line);margin-right:28px}
+.ben:last-child{border:0;margin:0}
+.ben h3{font-size:1.2rem;color:var(--pine);margin-bottom:8px}
+.ben p{color:var(--muted);font-size:.97rem}
+
+/* process (true sequence) */
+.process{background:var(--pine);color:#fff}
+.process .head h2{color:#fff}
+.process .head p{color:#c9d9d4}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;counter-reset:s}
+.step{border-top:3px solid var(--copper);padding-top:22px;counter-increment:s}
+.step::before{content:"Step " counter(s);display:block;color:var(--copper);font-weight:600;margin-bottom:8px}
+.step h3{font-size:1.4rem;margin-bottom:8px}
+.step p{color:#c9d9d4;font-size:.98rem}
+
+/* contact */
+.contact .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:start}
+.contact h2{font-size:clamp(2rem,4vw,3rem);color:var(--pine)}
+.contact .info{margin-top:28px;display:grid;gap:18px}
+.contact .info a,.contact .info span{font-size:1.1rem}
+.contact .info b{display:block;font-size:.9rem;color:var(--muted);font-weight:500}
+.contact .big{font-family:var(--head);font-weight:800;font-size:2rem;text-decoration:none;color:var(--copper-d)}
+form{background:var(--white);border:1px solid var(--line);border-radius:22px;padding:34px;display:grid;gap:16px}
+label{font-weight:600;font-size:.95rem;display:grid;gap:6px}
+input,select,textarea{font:inherit;padding:13px 14px;border:1.5px solid var(--line);border-radius:12px;background:var(--paper);width:100%;color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--copper);box-shadow:0 0 0 3px rgba(200,100,43,.2)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.ok{display:none;padding:14px;border-radius:12px;background:#e3f1e6;color:#1c5a2c;font-weight:600}
+
+footer{background:var(--ink);color:#aebbb6;padding:34px 0;font-size:.92rem}
+footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+footer a{color:#fff;text-decoration:none}
+
+@media(max-width:960px){
+  .hero .wrap,.about .wrap,.contact .wrap{grid-template-columns:1fr;gap:40px}
+  .hero .wrap{padding:64px 0 72px}
+  .services-grid{grid-template-columns:1fr 1fr}
+  .svc.feature{grid-column:span 2}
+  .benefits{grid-template-columns:1fr 1fr;row-gap:36px}
+  .ben:nth-child(2){border:0;margin:0}
+  .steps{grid-template-columns:1fr}
+  section{padding:70px 0}
+}
+@media(max-width:760px){
+  .menu-btn{display:block}
+  nav ul{display:none;position:absolute;top:70px;left:0;right:0;background:var(--paper);flex-direction:column;align-items:flex-start;padding:20px 4%;gap:18px;border-bottom:1px solid var(--line)}
+  nav ul.open{display:flex}
+  .topbar .wrap{justify-content:center;text-align:center}
+}
+@media(max-width:560px){
+  .services-grid,.benefits{grid-template-columns:1fr}
+  .svc.feature{grid-column:auto}
+  .ben{border:0;margin:0;padding:0}
+  .row{grid-template-columns:1fr}
+  form{padding:24px}
+  .hero .cta .btn{width:100%;text-align:center}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .pipes path{stroke-dashoffset:0}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <strong>O’Shea Heating and Plumbing</strong>
+    <a href="tel:+353852354083" aria-label="Call O’Shea Heating and Plumbing on +353 85 235 4083">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></svg>
+      +353 85 235 4083
+    </a>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8h8a3 3 0 0 1 3 3v8M14 19h7"/></svg></i>O’Shea</a>
+    <nav aria-label="Main">
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu">Menu</button>
+      <ul id="menu">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#why">Why us</a></li>
+        <li><a href="#process">How it works</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a class="btn btn-copper" href="tel:+353852354083">Call now</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" style="padding:0">
+  <svg class="pipes" viewBox="0 0 1400 640" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <path class="b" d="M-20 560H420q40 0 40-40V380q0-40 40-40H900"/>
+    <path d="M-20 600H520q40 0 40-40V440q0-40 40-40H1000q40 0 40-40V120q0-40 40-40H1420"/>
+  </svg>
+  <div class="wrap">
+    <div>
+      <h1>Warm homes. Dry floors. Done right.</h1>
+      <p class="lead">Boiler installs and servicing, central heating, bathrooms and emergency repairs from a local plumber who turns up when he says he will and leaves the place spotless.</p>
+      <div class="cta">
+        <a class="btn btn-copper" href="tel:+353852354083">Call +353 85 235 4083</a>
+        <a class="btn btn-line" href="#contact">Request a free quote</a>
+      </div>
+    </div>
+    <aside class="callcard" aria-label="Quick contact">
+      <h2>Leak or no heating?</h2>
+      <p>Call now and we’ll tell you what to do while we’re on the way.</p>
+      <a class="num" href="tel:+353852354083">+353 85 235 4083</a>
+      <ul>
+        <li><span>Emergency call-outs</span><span>Available</span></li>
+        <li><span>Quotes</span><span>Free, in writing</span></li>
+        <li><span>Workmanship</span><span>Guaranteed</span></li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="head">
+      <h2>Plumbing and heating, under one roof</h2>
+      <p>From a dripping tap to a full heating system, one trusted contact handles it all.</p>
+    </div>
+    <div class="services-grid">
+      <article class="svc feature">
+        <div>
+          <h3>Boiler installation and replacement</h3>
+          <p>Old boiler costing you a fortune or breaking down? We’ll size, supply and fit an efficient replacement, then show you how to get the best from it.</p>
+        </div>
+        <a class="btn btn-copper" href="#contact">Get a boiler quote</a>
+      </article>
+      <article class="svc">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c3 4 5 6.5 5 10a5 5 0 0 1-10 0c0-3.5 2-6 5-10z"/></svg>
+        <h3>Boiler servicing</h3>
+        <p>Annual checks that keep your boiler safe, efficient and under warranty.</p>
+      </article>
+      <article class="svc">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4v16M10 4v16M15 4v16M20 4v16M3 8h19M3 16h19"/></svg>
+        <h3>Central heating and radiators</h3>
+        <p>New systems, upgrades, power flushing, zone controls and radiator replacement.</p>
+      </article>
+      <article class="svc">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c3 4 6 7 6 11a6 6 0 0 1-12 0c0-4 3-7 6-11z"/><path d="M9 15a3 3 0 0 0 3 3"/></svg>
+        <h3>Leaks and burst pipes</h3>
+        <p>Fast response to stop the damage, then a proper repair that lasts.</p>
+      </article>
+      <article class="svc">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16v3a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5v-3zM7 12V6a2 2 0 0 1 4 0M6 20l-1 2M18 20l1 2"/></svg>
+        <h3>Bathrooms and showers</h3>
+        <p>Full bathroom fit-outs, power showers, taps, toilets and tidy pipework.</p>
+      </article>
+      <article class="svc">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg>
+        <h3>Tanks, cylinders and controls</h3>
+        <p>Hot water cylinders, immersions, timers and thermostats installed and fixed.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div class="wrap">
+    <div>
+      <h2>A local plumber you can actually get hold of</h2>
+      <p>O’Shea Heating and Plumbing is a family-run service built on one idea: do the job properly, charge a fair price and treat your home like our own.</p>
+      <p>No call centres and no runaround. When you phone, you speak to the person who will be doing the work, and you get a clear price before a single tool comes out.</p>
+      <p style="margin-top:28px"><a class="btn btn-pine" href="tel:+353852354083">Talk to us today</a></p>
+    </div>
+    <div class="facts">
+      <div><h3>Domestic and small commercial</h3><p>Houses, apartments, rentals and local businesses.</p></div>
+      <div><h3>Clear communication</h3><p>We confirm arrival times and keep you updated.</p></div>
+      <div><h3>Quality parts and materials</h3><p>Reliable products backed by proper warranties.</p></div>
+      <div><h3>Clean and respectful</h3><p>Dust sheets down, tidy finish and everything explained.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="wrap">
+    <div class="head"><h2>Why homeowners call us first</h2></div>
+    <div class="benefits">
+      <div class="ben"><h3>Upfront pricing</h3><p>A written quote before work starts. No surprise extras on the invoice.</p></div>
+      <div class="ben"><h3>Fast response</h3><p>Same-day visits where possible and emergency call-outs when it can’t wait.</p></div>
+      <div class="ben"><h3>Guaranteed work</h3><p>If something isn’t right after we leave, we come back and fix it.</p></div>
+      <div class="ben"><h3>Honest advice</h3><p>We’ll tell you when a repair will do and when replacing makes sense.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="process" class="process">
+  <div class="wrap">
+    <div class="head"><h2>From first call to finished job</h2><p>Getting help should be simple.</p></div>
+    <div class="steps">
+      <div class="step"><h3>Call or message us</h3><p>Tell us what’s happening. We’ll give advice straight away and book a visit.</p></div>
+      <div class="step"><h3>Get a clear quote</h3><p>We inspect the problem and give you a fixed price in writing.</p></div>
+      <div class="step"><h3>We fix it properly</h3><p>Neat, tested and explained, with the area left clean.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div>
+      <h2>Tell us what needs fixing</h2>
+      <p style="color:var(--muted);margin-top:16px;max-width:44ch">For emergencies, phone is quickest. For everything else, send a message and we’ll reply the same day.</p>
+      <div class="info">
+        <div><b>Phone</b><a class="big" href="tel:+353852354083">+353 85 235 4083</a></div>
+        <div><b>WhatsApp</b><a href="https://wa.me/353852354083">Message us on WhatsApp</a></div>
+        <div><b>Hours</b><span>Mon to Sat, with emergency call-outs available</span></div>
+      </div>
+    </div>
+    <form id="quote" novalidate>
+      <div class="row">
+        <label>Your name<input type="text" name="name" autocomplete="name" required></label>
+        <label>Phone number<input type="tel" name="phone" autocomplete="tel" required></label>
+      </div>
+      <label>What do you need?
+        <select name="service">
+          <option>Boiler installation or replacement</option>
+          <option>Boiler service</option>
+          <option>Central heating or radiators</option>
+          <option>Leak or emergency repair</option>
+          <option>Bathroom or shower</option>
+          <option>Something else</option>
+        </select>
+      </label>
+      <label>Details<textarea name="msg" rows="4" placeholder="Tell us briefly what’s going on"></textarea></label>
+      <button class="btn btn-copper" type="submit">Send my request</button>
+      <div class="ok" id="ok" role="status">Thanks, your request is in. We’ll call you back shortly.</div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr"></span> O’Shea Heating and Plumbing. All rights reserved.</span>
+    <a href="tel:+353852354083">+353 85 235 4083</a>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+var b=document.getElementById('menuBtn'),m=document.getElementById('menu');
+b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+m.addEventListener('click',function(e){if(e.target.tagName==='A'){m.classList.remove('open');b.setAttribute('aria-expanded',false)}});
+document.getElementById('quote').addEventListener('submit',function(e){e.preventDefault();document.getElementById('ok').style.display='block';this.reset()});
+</script>
+</body>
+</html>
